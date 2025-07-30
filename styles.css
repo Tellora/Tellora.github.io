@@ -60,10 +60,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -1233,6 +1240,21 @@ textarea.form-control {
   .about-content,
   .contact-content {
       flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .intro-text,
+  .intro-image,
+  .about-text,
+  .about-image,
+  .contact-info,
+  .contact-form,
+  .service-content-text,
+  .service-content-image {
+      flex: 1 1 300px;
+      min-width: 280px;
+      max-width: 600px;
   }
 
   .service-content-inner {
@@ -1275,6 +1297,7 @@ textarea.form-control {
       justify-content: center;
       gap: 30px;
       transition: all 0.5s ease;
+      z-index: 10001;
   }
 
   .nav-menu.active {
@@ -1319,12 +1342,15 @@ textarea.form-control {
   .clients-container {
     flex-direction: column;
     gap: 20px;
+    overflow-x: visible;
+    scroll-snap-type: y mandatory;
   }
 
   .client-logo {
     min-width: auto;
     width: 100%;
     height: 60px;
+    scroll-snap-align: start;
   }
 
   /* Adjust hero buttons for mobile */
@@ -1340,6 +1366,27 @@ textarea.form-control {
     bottom: 20px;
     right: 20px;
     font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Phone-specific client logo slider optimization */
+  .clients-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .client-logo {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 70px;
+    scroll-snap-align: start;
+    margin-right: 10px;
   }
 }
 

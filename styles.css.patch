@@ -1,0 +1,260 @@
+<<<<<<<
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero h1 {
+      font-size: 44px;
+  }
+
+  .intro-content,
+  .about-content,
+  .contact-content {
+      flex-direction: column;
+  }
+
+  .service-content-inner {
+      flex-direction: column;
+  }
+
+  .service-content-image {
+      width: 100%;
+  }
+}
+=======
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero h1 {
+      font-size: 44px;
+  }
+
+  .intro-content,
+  .about-content,
+  .contact-content {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .intro-text,
+  .intro-image,
+  .about-text,
+  .about-image,
+  .contact-info,
+  .contact-form,
+  .service-content-text,
+  .service-content-image {
+      flex: 1 1 300px;
+      min-width: 280px;
+      max-width: 600px;
+  }
+
+  .service-content-inner {
+      flex-direction: column;
+  }
+
+  .service-content-image {
+      width: 100%;
+  }
+}
+>>>>>>> REPLACE
+
+<<<<<<<
+@media (max-width: 768px) {
+  .section {
+      padding: 70px 0;
+  }
+
+  .hero h1 {
+      font-size: 36px;
+  }
+
+  .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .hero-buttons .btn {
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-menu {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: var(--dark);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-menu li {
+      margin: 0;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .portfolio-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+=======
+@media (max-width: 768px) {
+  .section {
+      padding: 70px 0;
+  }
+
+  .hero h1 {
+      font-size: 36px;
+  }
+
+  .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .hero-buttons .btn {
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-menu {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: var(--dark);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transition: all 0.5s ease;
+      z-index: 10001;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-menu li {
+      margin: 0;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .portfolio-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+>>>>>>> REPLACE
+
+<<<<<<<
+@media (max-width: 576px) {
+  .section-title h2 {
+      font-size: 28px;
+  }
+
+  .about-stats {
+      grid-template-columns: 1fr;
+  }
+
+  /* Adjust client logos container for mobile */
+  .clients-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .client-logo {
+    min-width: auto;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* Adjust hero buttons for mobile */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Back to top button smaller and bottom right */
+  #back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
+=======
+@media (max-width: 576px) {
+  .section-title h2 {
+      font-size: 28px;
+  }
+
+  .about-stats {
+      grid-template-columns: 1fr;
+  }
+
+  /* Adjust client logos container for mobile */
+  .clients-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .client-logo {
+    min-width: auto;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* Adjust hero buttons for mobile */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Back to top button smaller and bottom right */
+  #back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
