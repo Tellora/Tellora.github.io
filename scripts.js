@@ -232,11 +232,14 @@ document.addEventListener('DOMContentLoaded', function() {
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
 
-  // Create a rotating cube
-  const geometry = new THREE.BoxGeometry(2, 2, 2);
-  const material = new THREE.MeshStandardMaterial({ color: 0xff6b00, metalness: 0.7, roughness: 0.2 });
-  const cube = new THREE.Mesh(geometry, material);
-  scene.add(cube);
+const textureLoader = new THREE.TextureLoader();
+const logoTexture = textureLoader.load('tellora-logo.png');
+
+// Create a rotating cube with logo texture
+const geometry = new THREE.BoxGeometry(2, 2, 2);
+const material = new THREE.MeshStandardMaterial({ map: logoTexture, metalness: 0.7, roughness: 0.2 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
   // Add lights
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);

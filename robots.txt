@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.telloramedia.com/sitemap.xml
+Sitemap: https://www.tellora.github.io/sitemap.xml
