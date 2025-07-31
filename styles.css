@@ -519,6 +519,40 @@ a:hover {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .client-slider {
+    display: none;
+  }
+  .client-collage-mobile {
+    display: block;
+  }
+}
+
+.client-collage-mobile {
+  display: none;
+}
+
+.client-collage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.client-collage-grid .client-logo {
+  width: 100px;
+  height: 60px;
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.client-collage-grid .client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .client-slider-title {
   text-align: center;
   margin-bottom: 40px;
@@ -1379,6 +1413,8 @@ textarea.form-control {
     -webkit-overflow-scrolling: touch;
     gap: 15px;
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .client-logo {
@@ -1387,6 +1423,8 @@ textarea.form-control {
     height: 70px;
     scroll-snap-align: start;
     margin-right: 10px;
+    padding: 5px;
+    box-sizing: border-box;
   }
 }
 
