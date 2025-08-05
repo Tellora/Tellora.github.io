@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,8 @@
     <title>Tellora Media - Digital Marketing Agency</title>
     <meta name="description" content="Tellora Media is a leading digital marketing agency helping businesses grow with SEO, social media, web design, content creation, and performance marketing." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.tellora.github.io/" />
-    <link rel="icon" type="image/png" href="tellora-logo.png" />
+    <link rel="canonical" href="https://telloramedia.online/" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tellora Media - Digital Marketing Agency" />
     <meta property="og:description" content="Tellora Media is a leading digital marketing agency helping businesses grow with SEO, social media, web design, content creation, and performance marketing." />
-    <meta property="og:url" content="https://www.tellora.github.io/" />
-    <meta property="og:image" content="https://www.tellora.github.io/tellora-logo.png" />
+    <meta property="og:url" content="https://telloramedia.online/" />
+    <meta property="og:image" content="https://telloramedia.online/tellora-logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tellora Media - Digital Marketing Agency" />
     <meta name="twitter:description" content="Tellora Media is a leading digital marketing agency helping businesses grow with SEO, social media, web design, content creation, and performance marketing." />
-    <meta name="twitter:image" content="https://www.tellora.github.io/tellora-logo.png" />
+    <meta name="twitter:image" content="https://telloramedia.online/tellora-logo.png" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -32,8 +32,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Tellora Media",
-      "url": "https://www.tellora.github.io/",
-      "logo": "https://www.tellora.github.io/tellora-logo.png",
+      "url": "https://telloramedia.online/",
+      "logo": "https://telloramedia.online/tellora-logo.png",
       "sameAs": [
         "https://www.facebook.com/telloramedia",
         "https://twitter.com/telloramedia",
@@ -58,31 +58,31 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.tellora.github.io/"
+          "item": "https://telloramedia.online/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://www.tellora.github.io/#about"
+          "item": "https://telloramedia.online/#about"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Services",
-          "item": "https://www.tellora.github.io/#services"
+          "item": "https://telloramedia.online/#services"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Portfolio",
-          "item": "https://www.tellora.github.io/#portfolio"
+          "item": "https://telloramedia.online/#portfolio"
         },
         {
           "@type": "ListItem",
           "position": 5,
           "name": "Contact",
-          "item": "https://www.tellora.github.io/#contact"
+          "item": "https://telloramedia.online/#contact"
         }
       ]
     }
@@ -92,7 +92,7 @@
     <!-- Intro Animation Overlay -->
     <div id="intro-overlay">
         <div id="intro-bg-effect"></div>
-        <img src="telloranimation.gif" alt="Tellora Logo" id="intro-logo" />
+        <img src="tellora-logo.png" alt="Tellora Logo" id="intro-logo" />
         <div id="intro-tagline">Ignite Your Digital Presence with Innovation</div>
         <div id="intro-graphics">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=80&q=80" alt="Digital Marketing 1" />
@@ -112,9 +112,6 @@
         <div class="particles"></div>
     </div>
     <div class="interactive-element"></div>
-
-    <!-- 3D Canvas for Hero Section -->
-    <!-- Removed duplicate canvas to fix blank site issue -->
 
     <!-- Header -->
     <header class="header">
@@ -143,7 +140,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <canvas id="hero-3d-canvas"></canvas>
         <div class="container">
             <div class="hero-content fade-in">
                 <h1>Ignite Your <span>Digital Presence</span></h1>
@@ -740,10 +736,22 @@
         </div>
     </section>
 
+    <!-- Intro Animation Overlay (Reverted) -->
+    <div id="intro-overlay">
+        <div id="intro-bg-effect"></div>
+        <img src="tellora-logo.png" alt="Tellora Logo" id="intro-logo" />
+        <div id="intro-tagline">Ignite Your Digital Presence with Innovation</div>
+        <div id="intro-graphics">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=80&q=80" alt="Digital Marketing 1" />
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=80&q=80" alt="Digital Marketing 2" />
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=80&q=80" alt="Digital Marketing 3" />
+        </div>
+    </div>
+
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
+    <section id="portfolio" class="section portfolio">
         <div class="container">
-            <div class="section-title fade-in">
+            <div class="section-title">
                 <h2>Our Portfolio</h2>
                 <p>Explore our recent projects and see how we've helped businesses achieve their digital marketing goals.</p>
             </div>
@@ -895,78 +903,96 @@
                 </div>
             </div>
             <div class="map-container fade-in">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <p>Map Location</p>
-                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.0000000000005!2d77.28564089999999!3d28.6805917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcb6f2f9b7c3%3A0x4f5b8e8b6f9b7c3!2sRohtash%20Nagar%2C%20Shahdara%2C%20Delhi%2C%20110032!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="#" class="footer-logo">
-                        <span>Tellora</span> Media
-                    </a>
-                    <p>We help businesses transform their digital landscape with innovative marketing strategies that drive growth, engagement, and conversion.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links-container">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-container">
-                    <h4 class="footer-heading">Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#seo-tab">SEO Optimization</a></li>
-                        <li><a href="#social-tab">Social Media Marketing</a></li>
-                        <li><a href="#web-tab">Web Designing</a></li>
-                        <li><a href="#content-tab">Content Creation</a></li>
-                        <li><a href="#influencer-tab">Micro Influencer Collab</a></li>
-                        <li><a href="#performance-tab">Performance Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="footer-contact-text">
-                            9515 Rohtash Nagar, Delhi - 110032
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="footer-contact-text">
-                            +91 9811539510
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="footer-contact-text">
-                            telloramedia@gmail.com
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Tellora Media. All Rights Reserved.</p>
-            </div>
-        </div>
-  </footer>
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with the latest digital marketing tips, trends, and exclusive offers. Join our mailing list to receive valuable insights directly in your inbox.</p>
+      <form id="newsletterForm" class="newsletter-form" novalidate>
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <div id="newsletterMessage" class="newsletter-message"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-about">
+                  <a href="#" class="footer-logo">
+                      <span>Tellora</span> Media
+                  </a>
+                  <p>We help businesses transform their digital landscape with innovative marketing strategies that drive growth, engagement, and conversion.</p>
+                  <div class="social-links">
+                      <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
+                      <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i><span class="visually-hidden">Twitter</span></a>
+                      <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i><span class="visually-hidden">Instagram</span></a>
+                      <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="visually-hidden">LinkedIn</span></a>
+                  </div>
+              </div>
+              <div class="footer-links-container">
+                  <h4 class="footer-heading">Quick Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#portfolio">Portfolio</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="footer-links-container">
+                  <h4 class="footer-heading">Our Services</h4>
+                  <ul class="footer-links">
+                      <li><a href="#seo-tab">SEO Optimization</a></li>
+                      <li><a href="#social-tab">Social Media Marketing</a></li>
+                      <li><a href="#web-tab">Web Designing</a></li>
+                      <li><a href="#content-tab">Content Creation</a></li>
+                      <li><a href="#influencer-tab">Micro Influencer Collab</a></li>
+                      <li><a href="#performance-tab">Performance Marketing</a></li>
+                  </ul>
+              </div>
+              <div class="footer-contact">
+                  <h4 class="footer-heading">Contact Us</h4>
+                  <div class="footer-contact-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="footer-contact-text">
+                          9515 Rohtash Nagar, Delhi - 110032
+                      </div>
+                  </div>
+                  <div class="footer-contact-item">
+                      <i class="fas fa-phone-alt"></i>
+                      <div class="footer-contact-text">
+                          +91 9811539510
+                      </div>
+                  </div>
+                  <div class="footer-contact-item">
+                      <i class="fas fa-envelope"></i>
+                      <div class="footer-contact-text">
+                          telloramedia@gmail.com
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2023 Tellora Media. All Rights Reserved.</p>
+          </div>
+      </div>
+</footer>
 
   <!-- Floating Contact Icons -->
   <div id="floating-contact-icons">
@@ -979,5 +1005,10 @@
   </div>
 
   <script src="scripts.js"></script>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
   </body>
 </html>

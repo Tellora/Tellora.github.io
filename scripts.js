@@ -224,59 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   document.head.appendChild(style);
 
-  // Three.js 3D scene setup for hero section
-  const canvas = document.getElementById('hero-3d-canvas');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
-
-const textureLoader = new THREE.TextureLoader();
-const logoTexture = textureLoader.load('tellora-logo.png');
-
-// Create a rotating cube with logo texture
-const geometry = new THREE.BoxGeometry(2, 2, 2);
-const material = new THREE.MeshStandardMaterial({ map: logoTexture, metalness: 0.7, roughness: 0.2 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-  // Add lights
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-  const pointLight = new THREE.PointLight(0xff6b00, 1);
-  pointLight.position.set(5, 5, 5);
-  scene.add(pointLight);
-
-  camera.position.z = 5;
-
-  // Resize handler
-  function onWindowResize() {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  }
-  window.addEventListener('resize', onWindowResize);
-  onWindowResize();
-
-  // Mouse move interaction
-  let mouseX = 0;
-  let mouseY = 0;
-  document.addEventListener('mousemove', (event) => {
-    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-  });
-
-  // Animation loop
-  function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01 + mouseY * 0.05;
-    cube.rotation.y += 0.01 + mouseX * 0.05;
-    renderer.render(scene, camera);
-  }
-  animate();
+// Removed Three.js 3D cube - replaced with simple background
 });
 
 window.addEventListener('scroll', checkFadeElements);

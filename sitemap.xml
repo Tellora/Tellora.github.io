@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.tellora.github.io/</loc>
+    <loc>https://telloramedia.online/</loc>
     <priority>1.00</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.tellora.github.io/#about</loc>
+    <loc>https://telloramedia.online/#about</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.tellora.github.io/#services</loc>
+    <loc>https://telloramedia.online/#services</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.tellora.github.io/#portfolio</loc>
+    <loc>https://telloramedia.online/#portfolio</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.tellora.github.io/#contact</loc>
+    <loc>https://telloramedia.online/#contact</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
