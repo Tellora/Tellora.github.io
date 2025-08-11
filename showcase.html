@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QCMBLK7G9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8QCMBLK7G9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tellora Media - Showcase</title>
+    <meta name="description" content="Explore Tellora Media's showcase featuring stunning videos and pictures showcasing successful digital marketing campaigns, client case studies, and measurable results.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Showcase Specific Styles */
+        .showcase-hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* CSS for embedded website iframe */
+        .embedded-website {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .embed-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .showcase-item:hover .embed-indicator {
+            transform: scale(1.1);
+        }
+        
+        /* Instagram Embed Container */
+        .instagram-embed-container {
+            width: 100%;
+            height: 80vh;
+            max-height: 750px;
+            overflow: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .showcase-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 107, 0, 0.1) 0%, transparent 70%);
+        }
+
+        .showcase-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            text-shadow: 0 0 10px rgba(255, 107, 0, 0.7);
+        }
+
+        .showcase-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .showcase-hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+
+        .showcase-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .showcase-filter button {
+            padding: 10px 20px;
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid var(--primary);
+            color: var(--light);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .showcase-filter button.active,
+        .showcase-filter button:hover {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .showcase-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 300px;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .showcase-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .showcase-item-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .showcase-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        .showcase-item-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .showcase-item-category {
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        .showcase-item-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .showcase-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .showcase-modal.active {
+            display: flex;
+        }
+
+        .showcase-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .showcase-modal-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 5px;
+        }
+
+        .showcase-modal-content video {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 5px;
+        }
+
+        .showcase-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .showcase-modal-caption {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .upload-section {
+            background: rgba(30, 30, 30, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+
+        .upload-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .upload-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: white;
+            font-family: inherit;
+        }
+
+        .file-upload {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border: 2px dashed rgba(255, 107, 0, 0.5);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            border-color: var(--primary);
+        }
+
+        .file-upload i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .file-upload-text {
+            text-align: center;
+        }
+
+        .file-upload input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .btn-upload {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .btn-upload:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+        }
+
+        .no-items-message {
+            text-align: center;
+            padding: 40px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            color: var(--gray);
+            font-size: 18px;
+        }
+
+        /* Case Studies Styles */
+        .case-studies-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .case-study-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 107, 0, 0.2);
+        }
+        
+        .case-study-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .case-study-card:hover .case-study-image img {
+            transform: scale(1.1);
+        }
+        
+        .case-study-content {
+            padding: 25px;
+            color: var(--light);
+        }
+        
+        .case-study-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .case-study-category {
+            color: var(--gray);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        
+        .case-study-stats {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        
+        .stat {
+            flex: 1;
+            text-align: center;
+            background: rgba(255, 107, 0, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .case-study-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .case-study-link {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        
+        .case-study-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .case-study-link:hover::after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .showcase-hero h1 {
+                font-size: 36px;
+            }
+
+            .showcase-hero p {
+                font-size: 16px;
+            }
+
+            .showcase-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .showcase-item {
+                height: 250px;
+            }
+
+            .upload-section {
+                padding: 20px;
+            }
+            
+            .case-studies-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden elements to prevent JavaScript errors -->
+    <div class="particles" style="display: none;"></div>
+    <div class="interactive-element" style="display: none;"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span>Tellora</span> Media
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="showcase.html" class="active">Showcase</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Showcase Hero -->
+    <section class="showcase-hero">
+        <div class="showcase-hero-content">
+            <h1>Digital Marketing Services Showcase</h1>
+            <p>Explore our portfolio of successful digital marketing campaigns and creative solutions for our clients</p>
+        </div>
+    </section>
+
+    <!-- Showcase Gallery -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Digital Marketing Services Gallery</h2>
+                <p>Browse through our successful campaigns and client projects across various digital marketing services</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="showcase-filter">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="content">Content Marketing</button>
+                <button class="filter-btn" data-filter="ppc">PPC & Ads</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="email">Email Marketing</button>
+            </div>
+
+            <!-- Showcase Grid -->
+            <div class="showcase-grid">
+                <!-- SEO Services -->
+                <div class="showcase-item" data-category="seo">
+                    <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=600&q=80" alt="SEO Optimization Project">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">JS Wedding Services</div>
+                        <div class="showcase-item-category">SEO Optimization</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <!-- Social Media Marketing - Astrology Light for All Instagram -->
+                <div class="showcase-item" data-category="social" data-instagram-url="https://www.instagram.com/astrologylight4all">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Astrology Light for All Instagram">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Astrology Light for All</div>
+                        <div class="showcase-item-category">Instagram Growth</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                
+                <!-- Social Media Marketing - Dr. Cicil Smile Center Instagram -->
+                <div class="showcase-item" data-category="social" data-instagram-url="https://www.instagram.com/dr.cicilsmilecenter">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Dr. Cicil Smile Center Instagram">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Dr. Cicil Smile Center</div>
+                        <div class="showcase-item-category">Instagram Management</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- Content Marketing -->
+                <div class="showcase-item" data-category="content">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Content Marketing">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Safe Eats Blog</div>
+                        <div class="showcase-item-category">Content Strategy</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                </div>
+
+                <!-- PPC & Ads -->
+                <div class="showcase-item" data-category="ppc">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="PPC Campaign">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Tech Solutions</div>
+                        <div class="showcase-item-category">Google Ads Campaign</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                </div>
+
+                <!-- Branding -->
+                <div class="showcase-item" data-category="branding">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Brand Identity">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Glow Beauty</div>
+                        <div class="showcase-item-category">Brand Identity</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Astrology Light for All -->
+                <div class="showcase-item" data-category="web" data-website-url="https://astrologylightforall.github.io/">
+                    <img src="https://images.unsplash.com/photo-1532456745301-b2c645d8b80d?auto=format&fit=crop&w=600&q=80" alt="Astrology Light for All Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Astrology Light for All</div>
+                        <div class="showcase-item-category">Website Design</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Ghardazzle -->
+                <div class="showcase-item" data-category="web" data-website-url="https://abhaysehdevs.github.io/abhay-portfolio/">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="Ghardazzle Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Ghardazzle</div>
+                        <div class="showcase-item-category">Interior Design Portfolio</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Dr. Cicil Smile Center -->
+                <div class="showcase-item" data-category="web" data-website-url="https://abhaysehdevs.github.io/cicil-smile-clinic/">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dr. Cicil Smile Center Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Dr. Cicil Smile Center</div>
+                        <div class="showcase-item-category">Dental Clinic Website</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Piefinity -->
+                <div class="showcase-item" data-category="web" data-website-url="https://app.site123.com/?w=8424344">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Piefinity Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Piefinity</div>
+                        <div class="showcase-item-category">Bakery Website</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Bitminerz -->
+                <div class="showcase-item" data-category="web" data-website-url="https://644b55be5c800.site123.me/">
+                    <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=600&q=80" alt="Bitminerz Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Bitminerz</div>
+                        <div class="showcase-item-category">Cryptocurrency Website</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Monte Lora -->
+                <div class="showcase-item" data-category="web" data-website-url="https://668e56bfa69e2.site123.me/">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Monte Lora Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Monte Lora</div>
+                        <div class="showcase-item-category">Luxury Resort Website</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                </div>
+
+                <!-- Web Design - Safe Eats -->
+                <div class="showcase-item" data-category="web" data-website-url="https://www.safeats.com/">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Safe Eats Website">
+                    <div class="showcase-item-overlay">
+                        <div class="showcase-item-title">Safe Eats</div>
+                        <div class="showcase-item-category">Food Delivery Website</div>
+                    </div>
+                    <div class="showcase-item-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Studies Section -->
+            <div class="section-title" style="margin-top: 60px;">
+                <h2>Featured Case Studies</h2>
+                <p>Dive deeper into our most successful digital marketing campaigns</p>
+            </div>
+            
+            <div class="case-studies-container" style="margin-bottom: 60px;">
+                <!-- Case Study Cards will be added here -->
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=600&q=80" alt="JS Wedding Services Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>JS Wedding Services</h3>
+                        <p class="case-study-category">SEO Optimization</p>
+                        <div class="case-study-stats">
+                            <div class="stat">
+                                <span class="stat-value">187%</span>
+                                <span class="stat-label">Organic Traffic Increase</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Top 3</span>
+                                <span class="stat-label">Google Rankings</span>
+                            </div>
+                        </div>
+                        <p class="case-study-description">We helped JS Wedding Services dominate local search results through comprehensive keyword research, on-page optimization, and local SEO strategies.</p>
+                        <a href="#" class="case-study-link">View Full Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=600&q=80" alt="ALFA Astrology Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>ALFA Astrology</h3>
+                        <p class="case-study-category">Social Media Marketing</p>
+                        <div class="case-study-stats">
+                            <div class="stat">
+                                <span class="stat-value">15K+</span>
+                                <span class="stat-label">New Instagram Followers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">300%</span>
+                                <span class="stat-label">Engagement Increase</span>
+                            </div>
+                        </div>
+                        <p class="case-study-description">Our targeted social media strategy helped ALFA Astrology build a dedicated following and increase brand awareness through engaging content and influencer partnerships.</p>
+                        <a href="#" class="case-study-link">View Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing media -->
+    <div class="showcase-modal" id="mediaModal">
+        <div class="showcase-modal-content">
+            <div class="showcase-modal-close">&times;</div>
+            <div id="modalMedia"></div>
+            <div class="showcase-modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss how we can help your business grow</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Ready to transform your digital presence? Contact us today for a free consultation.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-detail-text">
+                                <h4>Phone</h4>
+                                <p>+91 9811539510</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-detail-text">
+                                <h4>Email</h4>
+                                <p>telloramedia@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-detail-text">
+                                <h4>Address</h4>
+                                <p>9515 Rohtash Nagar, New Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <span>Tellora</span> Media
+                    </a>
+                    <p>Transforming businesses through innovative digital marketing strategies that deliver measurable results.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/telloramedia" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/telloramedia" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/telloramedia" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/telloramedia" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="showcase.html">Showcase</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#seo-tab">SEO Optimization</a></li>
+                        <li><a href="index.html#social-tab">Social Media Marketing</a></li>
+                        <li><a href="index.html#web-tab">Web Design</a></li>
+                        <li><a href="index.html#content-tab">Content Creation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="footer-contact-text">+91 9811539510</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="footer-contact-text">telloramedia@gmail.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="footer-contact-text">9515 Rohtash Nagar, New Delhi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tellora Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Icons -->
+    <div id="floating-contact-icons">
+        <a href="https://wa.me/919811539510" target="_blank" rel="noopener" class="contact-icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:telloramedia@gmail.com" class="contact-icon email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+    <script>
+        // Showcase Filter
+        function setupShowcaseFilter() {
+            const filterButtons = document.querySelectorAll('.showcase-filter button');
+            const showcaseItems = document.querySelectorAll('.showcase-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    showcaseItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+        
+        // Function to handle website embedding for web design showcase
+        function setupWebsiteEmbedding() {
+            const webDesignItems = document.querySelectorAll('.showcase-item[data-category="web"]');
+            
+            webDesignItems.forEach(item => {
+                const itemTitle = item.querySelector('.showcase-item-title').textContent;
+                const websiteUrl = item.getAttribute('data-website-url');
+                
+                if (websiteUrl) {
+                    // Add a special icon or indicator for items with embedded websites
+                    const embedIcon = document.createElement('div');
+                    embedIcon.className = 'embed-indicator';
+                    embedIcon.innerHTML = '<i class="fas fa-external-link-alt"></i>';
+                    item.appendChild(embedIcon);
+                    
+                    // Modify click behavior to show embedded website in modal
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const modal = document.getElementById('mediaModal');
+                        const modalMedia = document.getElementById('modalMedia');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        // Create iframe for website embedding
+                        modalMedia.innerHTML = `
+                            <iframe src="${websiteUrl}" class="embedded-website" 
+                            frameborder="0" allowfullscreen="true"></iframe>
+                        `;
+                        
+                        modalCaption.textContent = `${itemTitle} - Live Website Preview`;
+                        modal.classList.add('active');
+                    });
+                }
+            });
+        }
+
+        // Media Modal
+function setupMediaModal() {
+    const showcaseItems = document.querySelectorAll('.showcase-item');
+    const modal = document.getElementById('mediaModal');
+    const modalMedia = document.getElementById('modalMedia');
+    const modalCaption = document.getElementById('modalCaption');
+    const modalClose = document.querySelector('.showcase-modal-close');
+
+    showcaseItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const isVideo = item.querySelector('video') !== null;
+            const title = item.querySelector('.showcase-item-title').textContent;
+            const category = item.querySelector('.showcase-item-category').textContent;
+            
+            // Check if this is an Instagram item
+            const instagramUrl = item.getAttribute('data-instagram-url');
+            if (instagramUrl) {
+                // Create Instagram embed for the modal
+                // Remove any hash or query parameters from the URL
+                const cleanInstagramUrl = instagramUrl.split('#')[0].split('?')[0];
+                modalMedia.innerHTML = `
+                    <div class="instagram-embed-container" style="width:100%; height:600px; overflow:auto; border-radius:10px;">
+                        <iframe src="${cleanInstagramUrl}/embed" 
+                                style="width:100%; height:100%; border:none;"
+                                frameborder="0" scrolling="yes" allowtransparency="true">
+                        </iframe>
+                    </div>
+                `;
+                modalCaption.textContent = `${title} - ${category} Instagram Profile`;
+                modal.classList.add('active');
+                return;
+            }
+
+            if (isVideo) {
+                const video = item.querySelector('video');
+                const videoSrc = video.querySelector('source').src;
+                const poster = video.getAttribute('poster');
+                
+                // Create a new video element for the modal
+                modalMedia.innerHTML = `
+                    <video controls autoplay poster="${poster}">
+                        <source src="${videoSrc}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
+            } else {
+                const imgSrc = item.querySelector('img').src;
+                modalMedia.innerHTML = `<img src="${imgSrc}" alt="${title}">`;
+            }
+
+            modalCaption.textContent = `${title} - ${category}`;
+            modal.classList.add('active');
+        });
+    });
+
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+        // Stop video if playing
+        const modalVideo = modalMedia.querySelector('video');
+        if (modalVideo) {
+            modalVideo.pause();
+        }
+        // Clear any iframes (Instagram embeds)
+        const iframes = modalMedia.querySelectorAll('iframe');
+        if (iframes.length > 0) {
+            setTimeout(() => {
+                modalMedia.innerHTML = '';
+            }, 100);
+        }
+    });
+
+    // Close modal when clicking outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modalClose.click();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modalClose.click();
+        }
+    });
+}
+
+        // File Upload Preview
+        function setupFileUpload() {
+            const fileInput = document.getElementById('mediaFile');
+            const fileUpload = document.querySelector('.file-upload');
+            const fileUploadText = document.querySelector('.file-upload-text');
+
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const fileName = file.name;
+                    const fileType = file.type.split('/')[0]; // 'image' or 'video'
+                    
+                    fileUploadText.innerHTML = `
+                        <p><strong>${fileName}</strong></p>
+                        <p>File type: ${fileType}, Size: ${(file.size / (1024 * 1024)).toFixed(2)} MB</p>
+                    `;
+                    
+                    fileUpload.style.borderColor = 'var(--primary)';
+                }
+            });
+
+            // Handle drag and drop
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                fileUpload.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                fileUpload.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                fileUpload.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight() {
+                fileUpload.style.borderColor = 'var(--primary)';
+                fileUpload.style.backgroundColor = 'rgba(255, 107, 0, 0.1)';
+            }
+
+            function unhighlight() {
+                fileUpload.style.borderColor = 'rgba(255, 107, 0, 0.5)';
+                fileUpload.style.backgroundColor = 'transparent';
+            }
+
+            fileUpload.addEventListener('drop', handleDrop, false);
+
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const file = dt.files[0];
+                fileInput.files = dt.files;
+                
+                if (file) {
+                    const fileName = file.name;
+                    const fileType = file.type.split('/')[0]; // 'image' or 'video'
+                    
+                    fileUploadText.innerHTML = `
+                        <p><strong>${fileName}</strong></p>
+                        <p>File type: ${fileType}, Size: ${(file.size / (1024 * 1024)).toFixed(2)} MB</p>
+                    `;
+                }
+            }
+        }
+
+        // Handle form submission
+        function setupUploadForm() {
+            const uploadForm = document.getElementById('uploadForm');
+            const showcaseGrid = document.querySelector('.showcase-grid');
+
+            uploadForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const title = document.getElementById('mediaTitle').value;
+                const category = document.getElementById('mediaCategory').value;
+                const description = document.getElementById('mediaDescription').value;
+                const file = document.getElementById('mediaFile').files[0];
+                
+                if (title && category && file) {
+                    // In a real application, you would upload the file to a server here
+                    // For this demo, we'll just create a new showcase item with the file
+                    
+                    const fileType = file.type.split('/')[0]; // 'image' or 'video'
+                    const fileURL = URL.createObjectURL(file);
+                    
+                    const newItem = document.createElement('div');
+                    newItem.className = 'showcase-item';
+                    newItem.setAttribute('data-category', `${fileType} ${category}`);
+                    
+                    if (fileType === 'image') {
+                        newItem.innerHTML = `
+                            <img src="${fileURL}" alt="${title}">
+                            <div class="showcase-item-overlay">
+                                <div class="showcase-item-title">${title}</div>
+                                <div class="showcase-item-category">${category}</div>
+                            </div>
+                            <div class="showcase-item-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        `;
+                    } else if (fileType === 'video') {
+                        newItem.innerHTML = `
+                            <video class="showcase-item-video" muted>
+                                <source src="${fileURL}" type="${file.type}">
+                            </video>
+                            <div class="showcase-item-overlay">
+                                <div class="showcase-item-title">${title}</div>
+                                <div class="showcase-item-category">${category}</div>
+                            </div>
+                            <div class="showcase-item-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        `;
+                    }
+                    
+                    showcaseGrid.appendChild(newItem);
+                    
+                    // Reset form
+                    uploadForm.reset();
+                    document.querySelector('.file-upload-text').innerHTML = `
+                        <p>Drag & drop your file here or click to browse</p>
+                        <p class="small">Supported formats: JPG, PNG, GIF, MP4, MOV</p>
+                    `;
+                    document.querySelector('.file-upload').style.borderColor = 'rgba(255, 107, 0, 0.5)';
+                    
+                    // Reinitialize modal functionality for the new item
+                    setupMediaModal();
+                    
+                    // Show success message
+                    alert('Media uploaded successfully!');
+                }
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setupShowcaseFilter();
+            setupMediaModal();
+            setupWebsiteEmbedding();
+            
+            // Check if there are any showcase items
+            const showcaseGrid = document.querySelector('.showcase-grid');
+            const showcaseItems = document.querySelectorAll('.showcase-item');
+            
+            if (showcaseItems.length === 0) {
+                showcaseGrid.innerHTML = `
+                    <div class="no-items-message">
+                        <i class="fas fa-photo-video" style="font-size: 40px; margin-bottom: 20px; color: var(--primary);"></i>
+                        <p>No media items to display yet.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

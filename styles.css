@@ -829,6 +829,224 @@ a:hover {
   gap: 30px;
 }
 
+/* Showcase Section Styles */
+.showcase-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.showcase-filter button {
+  padding: 10px 20px;
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid var(--primary);
+  color: var(--light);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.showcase-filter button.active,
+.showcase-filter button:hover {
+  background: var(--gradient);
+  color: white;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.showcase-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(30, 30, 30, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px;
+  cursor: pointer;
+}
+
+.showcase-item-hidden {
+  display: none;
+}
+
+.showcase-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05);
+}
+
+.showcase-item-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.showcase-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.showcase-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.showcase-item-category {
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.showcase-item-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.showcase-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.showcase-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  background-color: var(--dark);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.showcase-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.showcase-modal-close:hover {
+  color: var(--primary);
+}
+
+.showcase-modal-caption {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.showcase-modal img {
+  max-width: 100%;
+  max-height: 70vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.showcase-modal video {
+  max-width: 100%;
+  max-height: 70vh;
+  display: block;
+  margin: 0 auto;
+}
+
+/* CSS for embedded website iframe */
+.embedded-website {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.embed-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary);
+  color: var(--dark);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.showcase-item:hover .embed-indicator {
+  transform: scale(1.1);
+}
+
+/* Instagram Embed Container */
+.instagram-embed-container {
+  width: 100%;
+  height: 80vh;
+  max-height: 750px;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 .portfolio-item {
   border-radius: 10px;
   overflow: hidden;
