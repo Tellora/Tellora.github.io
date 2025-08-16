@@ -120,12 +120,12 @@ function animateStats() {
 
 // Services Tabs
 function setupServicesTabs() {
-  const tabs = document.querySelectorAll('.services-tab');
+  const tabs = document.querySelectorAll('.service-tab-button');
   const contents = document.querySelectorAll('.service-content');
   
   tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-          const target = tab.getAttribute('data-tab');
+          const target = tab.getAttribute('data-service');
           
           // Remove active class from all tabs and contents
           tabs.forEach(t => t.classList.remove('active'));
@@ -141,17 +141,18 @@ function setupServicesTabs() {
   document.querySelectorAll('.service-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
           e.preventDefault();
-          const target = btn.getAttribute('data-tab');
+          const target = btn.getAttribute('data-service');
           
-          // Scroll to services detail section
-          document.querySelector('.services-detail').scrollIntoView({ behavior: 'smooth' });
+          // Scroll to services section
+          document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
           
           // Activate the corresponding tab
           setTimeout(() => {
-              document.getElementById(`${target}-tab`).click();
+              document.querySelector(`.service-tab-button[data-service="${target}"]`).click();
           }, 500);
       });
   });
+
 }
 
 // Portfolio Filter

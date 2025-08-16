@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js"></script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -51,7 +51,7 @@
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-9811539510",
+        "telephone": "+91-7678493113",
         "contactType": "customer service",
         "email": "telloramedia@gmail.com",
         "areaServed": "IN"
@@ -206,61 +206,263 @@
         </div>
     </section>
 
-    <!-- Services Icons Section -->
-    <section id="services" class="section">
+    <!-- Services Section - Consolidated and Enhanced -->
+    <section id="services" class="section services-detail">
         <div class="container">
             <div class="section-title fade-in">
                 <h2>Our Services</h2>
-                <p>We offer a comprehensive range of digital marketing services tailored to meet your business goals.</p>
+                <p>Comprehensive digital marketing solutions tailored to your business needs</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>SEO Optimization</h3>
-                    <p>Improve your website's visibility in search engines and drive organic traffic with our expert SEO strategies.</p>
-                    <a href="#seo-tab" class="btn service-btn" data-tab="seo">Learn More</a>
+            <div class="service-tabs">
+                <div class="service-tab-buttons">
+                    <button class="service-tab-button active" data-service="seo">SEO</button>
+                    <button class="service-tab-button" data-service="social">Social Media</button>
+                    <button class="service-tab-button" data-service="web">Web Design</button>
+                    <button class="service-tab-button" data-service="content">Content Marketing</button>
+                    <button class="service-tab-button" data-service="influencer">Influencer Marketing</button>
+                    <button class="service-tab-button" data-service="performance">Performance Marketing</button>
                 </div>
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-share-alt"></i>
+                <div class="service-tab-content">
+                    <div id="seo-content" class="service-content active">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Search Engine Optimization</h3>
+                                <p>Our SEO services help improve your website's visibility in search engine results, driving more organic traffic and increasing your online presence.</p>
+                                <p>We use a combination of on-page optimization, technical SEO, and content strategy to help your business rank higher for relevant keywords.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Keyword Research & Strategy</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>On-Page SEO Optimization</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Technical SEO Audits</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Link Building & Authority Building</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">SEO</text>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Social Media Marketing</h3>
-                    <p>Build a strong social media presence and engage with your audience through strategic content and campaigns.</p>
-                    <a href="#social-tab" class="btn service-btn" data-tab="social">Learn More</a>
-                </div>
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div id="social-content" class="service-content">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Social Media Marketing</h3>
+                                <p>Our social media marketing services help you build a strong online presence, engage with your audience, and drive traffic to your website.</p>
+                                <p>We create and manage compelling social media campaigns that resonate with your target audience and align with your business goals.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Social Media Strategy</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Content Creation & Curation</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Community Management</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Social Media Advertising</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">SOCIAL</text>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Web Designing</h3>
-                    <p>Create stunning, responsive websites that provide exceptional user experience and drive conversions.</p>
-                    <a href="#web-tab" class="btn service-btn" data-tab="web">Learn More</a>
-                </div>
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-pen-fancy"></i>
+                    <div id="web-content" class="service-content">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Web Design & Development</h3>
+                                <p>Our web design services help you create a stunning online presence that reflects your brand identity and engages your visitors.</p>
+                                <p>We develop responsive, user-friendly websites that are optimized for performance and conversion.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Responsive Website Design</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>E-commerce Development</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>UI/UX Design</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Website Maintenance</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">WEB</text>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Content Creation</h3>
-                    <p>Develop engaging, SEO-friendly content that resonates with your audience and supports your marketing goals.</p>
-                    <a href="#content-tab" class="btn service-btn" data-tab="content">Learn More</a>
-                </div>
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                    <div id="content-content" class="service-content">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Content Marketing</h3>
+                                <p>Our content marketing services help you create valuable, relevant content that attracts and engages your target audience.</p>
+                                <p>We develop comprehensive content strategies that establish your brand as an authority in your industry and drive conversions.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Content Strategy Development</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Blog Writing & Management</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Email Marketing Campaigns</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Content Distribution</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">CONTENT</text>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Micro Influencer Collab</h3>
-                    <p>Partner with relevant micro-influencers to expand your reach and build authentic connections with potential customers.</p>
-                    <a href="#influencer-tab" class="btn service-btn" data-tab="influencer">Learn More</a>
-                </div>
-                <div class="service-card zoom-in">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <div id="influencer-content" class="service-content">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Influencer Marketing</h3>
+                                <p>Our influencer marketing services help you connect with relevant influencers in your industry to expand your reach and build credibility.</p>
+                                <p>We identify and collaborate with influencers who align with your brand values and can effectively promote your products or services.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Influencer Identification & Vetting</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Campaign Strategy & Management</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Performance Tracking & Analysis</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Relationship Building & Management</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">INFLUENCER</text>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Performance Marketing</h3>
-                    <p>Drive measurable results with data-driven campaigns focused on ROI and business growth.</p>
-                    <a href="#performance-tab" class="btn service-btn" data-tab="performance">Learn More</a>
+                    <div id="performance-content" class="service-content">
+                        <div class="service-content-inner">
+                            <div class="service-content-text fade-in">
+                                <h3>Performance Marketing</h3>
+                                <p>Our performance marketing services focus on measurable results, optimizing your marketing campaigns to maximize ROI.</p>
+                                <p>We use data-driven strategies to target the right audience, at the right time, with the right message.</p>
+                                <div class="service-features">
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>PPC Campaign Management</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Conversion Rate Optimization</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Retargeting Campaigns</span>
+                                    </div>
+                                    <div class="service-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Performance Analytics & Reporting</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn service-cta">Get Started</a>
+                            </div>
+                            <div class="service-content-image fade-in">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#1e1e1e" />
+                                    <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
+                                        <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="200" cy="150" r="50" fill="url(#introGradient)" opacity="0.3">
+                                        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <text x="200" y="155" font-family="Montserrat" font-size="24" font-weight="bold" text-anchor="middle" fill="white">PERFORMANCE</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,7 +477,7 @@
             </div>
             <div class="clients-container fade-in scrolling-wrapper">
                 <div class="client-logo">
-                    <img src="clientLogo (2).png" alt="Client Logo 1" />
+                    <img src="clientLogo (2).png" alt="Client Logo 1" />z
                 </div>
                 <div class="client-logo">
                     <img src="clientlogo (3).png" alt="Client Logo 2" />
@@ -354,171 +556,9 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="section about">
+    <!-- Modal for viewing media -->
 
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>About Us</h2>
-                <p>Learn more about our agency and our approach to digital marketing</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>Tellora is a full-service digital marketing agency dedicated to helping businesses grow their online presence and achieve their marketing goals.</p>
-                    <p>Founded in 2018, we've worked with clients across various industries, from small local businesses to large corporations, delivering tailored digital marketing solutions that drive results.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Data-Driven Approach</h3>
-                            <p>We use analytics and insights to guide our strategies and optimize campaigns for maximum ROI.</p>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-users"></i>
-                            <h3>Client-Focused</h3>
-                            <p>We work closely with our clients to understand their goals and deliver personalized solutions.</p>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-lightbulb"></i>
-                            <h3>Innovative Thinking</h3>
-                            <p>We stay ahead of industry trends and leverage cutting-edge technologies to give our clients a competitive edge.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Tellora Team">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Detail Section -->
-    <section id="services-detail" class="section services-detail">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Our Services</h2>
-                <p>Comprehensive digital marketing solutions tailored to your business needs</p>
-            </div>
-            <div class="service-tabs">
-                <div class="service-tab-buttons">
-                    <button class="service-tab-button active" data-service="seo">SEO</button>
-                    <button class="service-tab-button" data-service="social">Social Media</button>
-                    <button class="service-tab-button" data-service="content">Content Marketing</button>
-                    <button class="service-tab-button" data-service="performance">Performance Marketing</button>
-                </div>
-                <div class="service-tab-content">
-                    <div id="seo-content" class="service-content active">
-                        <div class="service-content-inner">
-                            <div class="service-content-text fade-in">
-                                <h3>Search Engine Optimization</h3>
-                                <p>Our SEO services help improve your website's visibility in search engine results, driving more organic traffic and increasing your online presence.</p>
-                                <p>We use a combination of on-page optimization, technical SEO, and content strategy to help your business rank higher for relevant keywords.</p>
-                                <div class="service-features">
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Keyword Research & Strategy</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>On-Page SEO Optimization</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Technical SEO Audits</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Link Building & Authority Building</span>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="social-content" class="service-content">
-                        <div class="service-content-inner">
-                            <div class="service-content-text fade-in">
-                                <h3>Social Media Marketing</h3>
-                                <p>Our social media marketing services help you build a strong online presence, engage with your audience, and drive traffic to your website.</p>
-                                <p>We create and manage compelling social media campaigns that resonate with your target audience and align with your business goals.</p>
-                                <div class="service-features">
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Social Media Strategy</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Content Creation & Curation</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Community Management</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Social Media Advertising</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="content-content" class="service-content">
-                        <div class="service-content-inner">
-                            <div class="service-content-text fade-in">
-                                <h3>Content Marketing</h3>
-                                <p>Our content marketing services help you create valuable, relevant content that attracts and engages your target audience.</p>
-                                <p>We develop comprehensive content strategies that establish your brand as an authority in your industry and drive conversions.</p>
-                                <div class="service-features">
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Content Strategy Development</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Blog Writing & Management</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Email Marketing Campaigns</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Content Distribution</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="performance-content" class="service-content">
-                        <div class="service-content-inner">
-                            <div class="service-content-text fade-in">
-                                <h3>Performance Marketing</h3>
-                                <p>Our performance marketing services focus on measurable results, optimizing your marketing campaigns to maximize ROI.</p>
-                                <p>We use data-driven strategies to target the right audience, at the right time, with the right message.</p>
-                                <div class="service-features">
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>PPC Campaign Management</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Conversion Rate Optimization</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Retargeting Campaigns</span>
-                                    </div>
-                                    <div class="service-feature">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Performance Analytics & Reporting</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Modal for viewing media -->
     
     <!-- Modal for viewing media -->
     <div class="showcase-modal" id="mediaModal">
@@ -529,12 +569,12 @@
         </div>
     </div>
     
-    <!-- About Section -->
+    <!-- About Section - Optimized -->
     <section id="about" class="section about">
         <div class="container">
             <div class="section-title fade-in">
                 <h2>About Us</h2>
-                <p>Learn more about our vision, mission, and the team behind Tellora Media.</p>
+                <p>Discover our story, our values, and the passionate team behind Tellora Media</p>
             </div>
             <div class="about-content">
                 <div class="about-image slide-left">
@@ -567,8 +607,33 @@
                 </div>
                 <div class="about-text slide-right">
                     <h2>We Are <span>Tellora Media</span></h2>
-                    <p>Founded in 2018, Tellora Media has grown from a small startup to a leading digital marketing agency. Our mission is to help businesses harness the power of digital marketing to achieve sustainable growth and success.</p>
-                    <p>We believe in a data-driven approach combined with creativity to deliver marketing solutions that not only look good but also perform exceptionally well. Our team of experts is passionate about staying ahead of industry trends and leveraging the latest technologies to give our clients a competitive edge.</p>
+                    <p>Founded in 2018, Tellora Media has evolved from an ambitious startup to a recognized leader in digital marketing. Our mission is to empower businesses of all sizes to thrive in the digital landscape through innovative, results-driven strategies.</p>
+                    <p>What sets us apart is our unique blend of data-driven methodology and creative excellence. We don't just create marketing campaigns that look impressive—we develop comprehensive strategies that deliver measurable results and tangible ROI for our clients.</p>
+                    <div class="about-values">
+                        <h3>Our Core Values</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Data-Driven Excellence</h4>
+                                <p>We base our strategies on solid analytics and measurable outcomes.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Creative Innovation</h4>
+                                <p>We constantly explore new ideas and approaches to keep our clients ahead.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-users"></i>
+                                <h4>Client Partnership</h4>
+                                <p>We view ourselves as an extension of your team, fully invested in your success.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-rocket"></i>
+                                <h4>Results Focus</h4>
+                                <p>We're committed to delivering tangible business growth, not just vanity metrics.</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="about-stats">
                         <div class="stat-item">
                             <div class="stat-number" data-count="200">0</div>
@@ -587,338 +652,15 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                     </div>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn service-cta">Work With Us</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Detail Section -->
-    <section class="section services-detail">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Our Services</h2>
-                <p>Discover how our comprehensive range of services can help your business grow.</p>
-            </div>
-            
-            <div class="services-tabs">
-                <button id="seo-tab" class="services-tab active" data-tab="seo">SEO Optimization</button>
-                <button id="social-tab" class="services-tab" data-tab="social">Social Media</button>
-                <button id="web-tab" class="services-tab" data-tab="web">Web Design</button>
-                <button id="content-tab" class="services-tab" data-tab="content">Content Creation</button>
-                <button id="influencer-tab" class="services-tab" data-tab="influencer">Influencer Marketing</button>
-                <button id="performance-tab" class="services-tab" data-tab="performance">Performance Marketing</button>
-            </div>
-            
-            <div id="seo-content" class="service-content active">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>SEO Optimization</h3>
-                        <p>Our SEO services are designed to improve your website's visibility in search engine results, driving more organic traffic and increasing your online presence.</p>
-                        <p>We use a combination of on-page optimization, technical SEO, and content strategy to help your website rank higher for relevant keywords.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Keyword Research & Strategy</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>On-Page & Technical SEO</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Link Building & Off-Page SEO</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>SEO Audit & Competitor Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
-                                <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <path d="M150,150 C150,125 175,100 200,100 C225,100 250,125 250,150 C250,175 225,200 200,200 C175,200 150,175 150,150 Z" stroke="#ff6b00" stroke-width="2" fill="none">
-                                <animate attributeName="d" 
-                                    values="M150,150 C150,125 175,100 200,100 C225,100 250,125 250,150 C250,175 225,200 200,200 C175,200 150,175 150,150 Z;
-                                            M145,145 C145,120 170,95 195,95 C220,95 245,120 245,145 C245,170 220,195 195,195 C170,195 145,170 145,145 Z;
-                                            M150,150 C150,125 175,100 200,100 C225,100 250,125 250,150 C250,175 225,200 200,200 C175,200 150,175 150,150 Z" 
-                                    dur="6s" repeatCount="indefinite" />
-                            </path>
-                            <path d="M200,100 L200,80 M200,200 L200,220 M150,150 L130,150 M250,150 L270,150" stroke="#ff6b00" stroke-width="2" />
-                            <circle cx="200" cy="150" r="30" fill="url(#introGradient)" opacity="0.3">
-                                <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite" />
-                            </circle>
-                            <text x="200" y="155" font-family="Montserrat" font-size="12" text-anchor="middle" fill="white">SEO</text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="social-content" class="service-content">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>Social Media Marketing</h3>
-                        <p>Our social media marketing services help you build a strong presence on platforms where your audience spends their time, increasing brand awareness and engagement.</p>
-                        <p>We develop tailored strategies for each platform, create engaging content, and manage campaigns to drive meaningful results.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Social Media Strategy Development</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Content Creation & Curation</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Community Management</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Paid Social Media Advertising</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
-                                <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="150" cy="150" r="30" fill="url(#introGradient)" opacity="0.2">
-                                <animate attributeName="cy" values="150;140;150" dur="3s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="230" cy="110" r="25" fill="url(#introGradient)" opacity="0.2">
-                                <animate attributeName="cy" values="110;100;110" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="230" cy="190" r="20" fill="url(#introGradient)" opacity="0.2">
-                                <animate attributeName="cy" values="190;200;190" dur="3.5s" repeatCount="indefinite" />
-                            </circle>
-                            <line x1="150" y1="150" x2="230" y2="110" stroke="#ff6b00" stroke-width="2">
-                                <animate attributeName="y1" values="150;140;150" dur="3s" repeatCount="indefinite" />
-                                <animate attributeName="y2" values="110;100;110" dur="4s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="150" y1="150" x2="230" y2="190" stroke="#ff6b00" stroke-width="2">
-                                <animate attributeName="y1" values="150;140;150" dur="3s" repeatCount="indefinite" />
-                                <animate attributeName="y2" values="190;200;190" dur="3.5s" repeatCount="indefinite" />
-                            </line>
-                            <text x="150" y="155" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">FB</text>
-                            <text x="230" y="115" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">IG</text>
-                            <text x="230" y="195" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">TW</text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="web-content" class="service-content">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>Web Designing</h3>
-                        <p>Our web design services focus on creating visually appealing, user-friendly websites that reflect your brand identity and drive conversions.</p>
-                        <p>We combine aesthetics with functionality to deliver websites that not only look great but also perform exceptionally well across all devices.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Responsive Website Design</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>UX/UI Design</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>E-commerce Website Development</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Website Maintenance & Support</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <rect x="100" y="70" width="200" height="160" rx="5" fill="#333" />
-                            <rect x="110" y="90" width="180" height="130" fill="#222">
-                                <animate attributeName="height" values="130;125;130" dur="3s" repeatCount="indefinite" />
-                            </rect>
-                            <rect x="110" y="70" width="180" height="20" fill="url(#introGradient)" opacity="0.3" />
-                            <circle cx="120" cy="80" r="3" fill="white" />
-                            <circle cx="130" cy="80" r="3" fill="white" />
-                            <circle cx="140" cy="80" r="3" fill="white" />
-                            <rect x="120" y="100" width="160" height="10" rx="2" fill="#444" />
-                            <rect x="120" y="120" width="100" height="10" rx="2" fill="#444" />
-                            <rect x="120" y="140" width="160" height="60" rx="2" fill="#444">
-                                <animate attributeName="height" values="60;55;60" dur="3s" repeatCount="indefinite" />
-                            </rect>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="content-content" class="service-content">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>Content Creation</h3>
-                        <p>Our content creation services help you develop engaging, informative, and SEO-friendly content that resonates with your target audience and supports your marketing goals.</p>
-                        <p>From blog posts and articles to social media content and email newsletters, we create content that drives engagement and conversions.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Blog Posts & Articles</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Social Media Content</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Email Newsletters</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Website Copy & Product Descriptions</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <rect x="100" y="70" width="200" height="160" rx="5" fill="#333" />
-                            <line x1="120" y1="100" x2="280" y2="100" stroke="#ff6b00" stroke-width="2">
-                                <animate attributeName="x2" values="280;270;280" dur="3s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="120" y1="120" x2="280" y2="120" stroke="#444" stroke-width="2">
-                                <animate attributeName="x2" values="280;260;280" dur="4s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="120" y1="140" x2="280" y2="140" stroke="#444" stroke-width="2">
-                                <animate attributeName="x2" values="280;250;280" dur="3.5s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="120" y1="160" x2="280" y2="160" stroke="#444" stroke-width="2">
-                                <animate attributeName="x2" values="280;265;280" dur="4.5s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="120" y1="180" x2="280" y2="180" stroke="#444" stroke-width="2">
-                                <animate attributeName="x2" values="280;255;280" dur="3.8s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="120" y1="200" x2="220" y2="200" stroke="#444" stroke-width="2">
-                                <animate attributeName="x2" values="220;200;220" dur="3.2s" repeatCount="indefinite" />
-                            </line>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="influencer-content" class="service-content">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>Micro Influencer Collaboration</h3>
-                        <p>Our micro influencer collaboration services help you partner with relevant influencers who have engaged audiences, expanding your reach and building authentic connections with potential customers.</p>
-                        <p>We identify the right influencers for your brand, develop collaboration strategies, and manage campaigns to ensure maximum impact.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Influencer Identification & Vetting</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Campaign Strategy & Planning</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Relationship Management</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Performance Tracking & Reporting</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <circle cx="200" cy="150" r="100" fill="url(#introGradient)" opacity="0.1">
-                                <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="150" cy="130" r="30" fill="#333">
-                                <animate attributeName="cy" values="130;125;130" dur="3s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="200" cy="180" r="30" fill="#333">
-                                <animate attributeName="cy" values="180;185;180" dur="3.5s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="250" cy="130" r="30" fill="#333">
-                                <animate attributeName="cy" values="130;125;130" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <path d="M150,130 L200,180 L250,130" stroke="#ff6b00" stroke-width="2" fill="none">
-                                <animate attributeName="d" 
-                                    values="M150,130 L200,180 L250,130;
-                                            M150,125 L200,185 L250,125;
-                                            M150,130 L200,180 L250,130" 
-                                    dur="4s" repeatCount="indefinite" />
-                            </path>
-                            <text x="150" y="135" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">👤</text>
-                            <text x="200" y="185" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">👤</text>
-                            <text x="250" y="135" font-family="Montserrat" font-size="10" text-anchor="middle" fill="white">👤</text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="performance-content" class="service-content">
-                <div class="service-content-inner">
-                    <div class="service-content-text fade-in">
-                        <h3>Performance Marketing</h3>
-                        <p>Our performance marketing services focus on driving measurable results through data-driven campaigns that optimize for ROI and business growth.</p>
-                        <p>We use a combination of paid advertising, conversion rate optimization, and analytics to deliver campaigns that generate leads, sales, and revenue.</p>
-                        <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>PPC Advertising (Google Ads, Bing Ads)</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Conversion Rate Optimization</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Retargeting Campaigns</span>
-                            </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Analytics & Performance Reporting</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-image fade-in">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#1e1e1e" />
-                            <rect x="100" y="70" width="200" height="160" rx="5" fill="#333" />
-                            <polyline points="120,200 160,150 200,180 240,120 280,90" stroke="#ff6b00" stroke-width="2" fill="none">
-                                <animate attributeName="points" 
-                                    values="120,200 160,150 200,180 240,120 280,90;
-                                            120,200 160,155 200,175 240,115 280,85;
-                                            120,200 160,150 200,180 240,120 280,90" 
-                                    dur="4s" repeatCount="indefinite" />
-                            </polyline>
-                            <circle cx="160" cy="150" r="5" fill="url(#introGradient)">
-                                <animate attributeName="cy" values="150;155;150" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="200" cy="180" r="5" fill="url(#introGradient)">
-                                <animate attributeName="cy" values="180;175;180" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="240" cy="120" r="5" fill="url(#introGradient)">
-                                <animate attributeName="cy" values="120;115;120" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                            <line x1="120" y1="90" x2="120" y2="200" stroke="#444" stroke-width="1" />
-                            <line x1="120" y1="200" x2="280" y2="200" stroke="#444" stroke-width="1" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Intro Animation Overlay (Reverted) -->
 
     <!-- Intro Animation Overlay (Reverted) -->
     <div id="intro-overlay">
@@ -1194,7 +936,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div class="contact-detail-text">
                                 <h4>Phone</h4>
-                                <p>+91 9811539510</p>
+                                <p>+91 7678493113</p>
                             </div>
                         </div>
                         <div class="contact-detail">
@@ -1303,7 +1045,7 @@
                   <div class="footer-contact-item">
                       <i class="fas fa-phone-alt"></i>
                       <div class="footer-contact-text">
-                          +91 9811539510
+                          +91 7678493113
                       </div>
                   </div>
                   <div class="footer-contact-item">
@@ -1322,7 +1064,7 @@
 
   <!-- Floating Contact Icons -->
   <div id="floating-contact-icons">
-    <a href="https://wa.me/919811539510" target="_blank" rel="noopener" class="contact-icon whatsapp" aria-label="WhatsApp">
+    <a href="https://wa.me/917678493113" target="_blank" rel="noopener" class="contact-icon whatsapp" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="mailto:telloramedia@gmail.com" class="contact-icon email" aria-label="Email">
